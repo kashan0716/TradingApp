@@ -52,18 +52,3 @@ export const GeneralContextProvider = (props) => {
 };
 
 export default GeneralContext;
-
-
-
-
-  // // return (
-  // //   <GeneralContext.Provider
-  // //     value={{
-       
-  // //       closeSellWindow: handleCloseSellWindow,
-  // //     }}
-  // //   >
-  //     {props.children}
-      
-  //   </GeneralContext.Provider>
-  // );

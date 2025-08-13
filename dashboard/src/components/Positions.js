@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios, { all } from "axios";
 
-// import { positions } from "../data/data";
-
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
-  
-    useEffect(() => {
-      axios.get("https://tradingapp-backend-517h.onrender.com).then((res) => {
-        // console.log(res.data);
-        setAllPositions(res.data);
-      });
-    }, []);
-  
+
+  useEffect(() => {
+    axios.get("http://localhost/3003/allPositions").then((res) => {
+      setAllPositions(res.data);
+    });
+  }, []);
+
   return (
     <>
       <h3 className="title">Positions ({allPositions.length})</h3>
